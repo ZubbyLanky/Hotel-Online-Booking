@@ -1,0 +1,79 @@
+@import "./variable";
+
+
+
+$breakpoint: (
+    "sm": 576px,
+    "md": 768px,
+    //"lg": 992px,
+    "xl": 1280px,
+    "xxl": 1400px,
+);
+
+
+@mixin sm{
+    @media (max-width: map-get($breakpoint, "sm") ){
+        @content;
+    }
+}
+
+
+@mixin md{
+    @media(min-width: map-get($breakpoint, "md")){
+        @content;
+    }
+}
+
+// @mixin lg{
+//     @media(min-width: map-get($breakpoint, "lg")){
+//         @content;
+//     }
+// }
+
+@mixin xl{
+    @media(min-width: map-get($breakpoint, "xl") ){
+        @content;
+    }
+}
+
+// @mixin xxl{
+//     @media(max-width: map-get($breakpoint, "xxl")){
+//         @content;
+//     }
+// }
+
+// @mixin breakpoints($bp: 0){
+//     @media(max-width: $bp){
+//         @content;
+//     }
+// }
+
+
+// .wrapper{
+
+//     @include sm{
+//         color: yellow;
+//     }
+
+//     @include md{
+//         color: green;
+//     }
+
+
+//     @include lg{
+//         color: $goldencolor;
+//     }
+
+//      @include xl{
+//          color: $bulecolor;
+//      }
+
+
+//      @include xxl{
+//          color: red;
+//      }
+
+//      @include breakpoints(1500px){
+//          color: pink;
+//      }
+// }

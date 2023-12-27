@@ -1,0 +1,128 @@
+@import "./variable";
+
+@import "./mixin";
+
+@import "./mediaquery";
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: $generalbgcolor;
+}
+
+
+nav{
+    @include nav;
+}
+
+
+
+div{
+    @include caro;
+}
+
+div{
+    @include second;
+}
+
+
+div{
+    @include back;
+}
+
+
+div{
+    @include heading;
+}
+
+
+div{
+    @include threerooms;
+}
+
+
+div{
+    @include bgimg;
+}
+
+
+div{
+    @include resturant;
+}
+
+
+div{
+    @include fourrooms;
+}
+
+div{
+    @include map;
+}
+
+footer{
+    font-size: $smallfont;
+    @include fot;
+}
+
+
+//SINGLE ROOM
+
+div{
+    @include singleroom;
+}
+
+div{
+    @include singleroommd;
+}
+
+div{
+    @include jude;
+}
+
+
+div{
+    @include faces;
+}
+
+
+//ROOM CLASSIC VIEW
+
+div{
+    @include roomclassicviewhead;
+}
+
+ 
+div{
+    @include standardsingleroom;
+}
+
+div{
+    @include gridd;
+}
+
+
+// BOOKINGS
+
+div{
+    @include book;
+}
+
+
+//CONTACT US PAGE
+
+div{
+    @include address;
+}
+
+div{
+    @include sendmessage;
+}

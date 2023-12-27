@@ -1,0 +1,1838 @@
+@import "./variable";
+
+
+@import "./mediaquery";
+
+
+
+
+//HOME 
+@mixin nav{
+    padding-inline: $generalpaddingleftright;
+    .icon{
+        width: 13%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+
+        a{
+            text-decoration: none;
+            color: $goldencolor;
+        }
+       
+    }
+}
+
+@mixin caro{
+
+    .carousel-item{
+        width: 100%;
+        height: 550px;
+        background-color: rgba(0, 0, 0, .5);
+        position: relative;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-caption{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            padding-left: 10rem;
+
+            @include sm{
+                width: 100%;
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+            @include md{
+                width: 100%;
+                align-items: center;
+                padding-left: 4rem;
+                padding-right: 4rem;
+                gap: 2rem;
+            }
+
+            @include xl{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                padding-left: 10rem;
+            }
+
+            h1{
+                font-size: $biggestfont;
+                @include sm{
+                 font-size: calc($bigfont / 1.2)
+                    
+                }
+
+                @include md{
+                    width: 100%;
+                    height: 100px;
+                    font-size: $biggestfont;
+
+                }
+
+                @include xl{
+                    font-size: $biggestfont;
+                }
+            }
+
+            p{
+                @include md{
+                    width: 100%;
+                    height: 100px;
+                    font-size: 2rem;
+                }
+
+                @include xl{
+
+                }
+            }
+            
+        }
+
+
+    }
+   
+
+}
+
+
+@mixin second{
+    #nd{
+        width: 100%;
+        height: 600px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        margin: 20px 0;
+        padding: 0 100px;
+
+        @include sm{
+            width: 100%;
+            height: 750px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 20px 0;
+            padding: 0 10px;
+        }
+
+        @include md{
+            width: 100%;
+            height: 950px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5rem;
+            margin: 30px 0;
+            padding: 0 20px;
+        }
+
+        @include xl{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+            margin: 20px 0;
+            padding: 0 100px;
+        }
+
+        .left{
+            width: 100%;
+            height: 400px;
+            position: relative;
+
+            @include sm{
+            width: 100%;
+            height: 300px;
+            position: relative;
+            }
+
+            @include md{
+                width: 100%;
+                height: 500px;
+                position: relative;
+                }
+
+                @include xl{
+                    width: 100%;
+                    height: 400px;
+                    position: relative;
+                }
+    
+
+            div:first-child{
+                width: 300px;
+                height: 400px;
+
+                @include sm{
+                    width: 150px;
+                    height: 300px;
+                }
+
+                @include md{
+                    width: 350px;
+                    height: 500px;
+                }
+
+                @include xl{
+                    width: 300px;
+                    height: 400px;
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+
+            div:last-child{
+                width: 400px;
+                height: 200px;
+                position: absolute;
+                bottom: 0;
+                left: 150px;
+
+                @include sm{
+                    width: 220px;
+                    height: 150px;
+                    bottom: 0;
+                    left: 75px;
+                }
+
+                @include md{
+                    width: 550px;
+                    height: 250px;
+                    bottom: 0;
+                    left: 175px;
+                }
+
+                @include xl{
+                    width: 400px;
+                    height: 200px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 150px;
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                
+            }
+
+
+        
+        }
+        
+        .right{
+            width: 100%;
+            height: 400px;
+        
+            @include sm{
+                width: 100%;
+                height: 500px;
+                font-size: $smallestfont;
+            }
+
+            @include md{
+                width: 100%;
+                height: 600px;
+                font-size: $generalfont;
+            }
+
+            @include xl{
+                width: 100%;
+                height: 400px;
+            }
+
+        }
+
+    }
+
+
+}
+
+
+
+@mixin back{
+    #backimg{
+        width: 100%;
+        height: 500px;
+        background-color: #3f3f81;
+        background-image: url("/ProjectImages/slide-2-new-2560x1268.jpg");
+        background-size: cover;
+        position: relative;
+
+        @include sm{
+            width: 100%;
+            height: 200px;
+
+        }
+
+        @include md{
+            width: 100%;
+            height: 400px;
+        }
+
+        @include xl{
+            width: 100%;
+            height: 500px;
+            background-color: #3f3f81;
+            background-image: url("/ProjectImages/slide-2-new-2560x1268.jpg");
+            background-size: cover;
+            position: relative;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        
+        }
+
+        .blu{
+            width: 45%;
+            height: 570px;
+            color: #eee;
+            background-color: #3f9cc1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            position: absolute;
+            right: 150px;
+            top: -35px;
+           padding-inline: 3.5rem;
+
+            @include sm{
+                width: 50%;
+                height: 230px;
+                gap: 2rem;
+                font-size: 1rem;
+                left: 20px;
+                top: -15px;
+                padding-inline: 1rem;
+                padding-block: 1.5rem;
+                overflow: scroll;
+            }
+
+            @include md{
+                width: 50%;
+                height: 450px;
+                gap: 3rem;
+                font-size: $generalfont;
+                left: 50px;
+                top: -25px;
+                padding-inline: 1rem;
+                padding-block: 1.5rem;
+                overflow: scroll;
+            }
+
+            @include xl{
+                width: 45%;
+                height: 570px;
+                color: #eee;
+                background-color: #3f9cc1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+                position: absolute;
+                right: 150px;
+                top: -35px;
+                padding-inline: 3.5rem;
+                border-radius: 10px;
+            }
+
+            .list{
+                width: 100%;
+                height: 200px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 10rem;
+                line-height: 3.5rem;
+
+                @include sm{
+                    width: 100%;
+                    height: 50px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .1rem;
+                    line-height: .7rem;
+                    
+                }
+
+                @include md{
+                    width: 100%;
+                    height: 100px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem; 
+                }
+
+                @include xl{
+                    width: 100%;
+                    height: 200px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 10rem;
+                    line-height: 3.5rem;
+                }
+
+                ul{
+                    list-style-type: none;
+                }
+            }
+        }
+
+    }
+}
+
+
+@mixin heading{
+    #rd{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 100px;
+        margin-block: 4rem;
+
+        @include sm{
+            height: 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            padding-inline: 1rem;
+            margin-block: 4rem;
+        }
+
+        div:first-child{
+            font-size: 1.2rem;
+
+    @include sm {
+        font-size: 1.1rem;
+    }
+
+    @include md{
+        font-size: 1rem;
+    }
+        }
+
+        .btn{
+            @include sm{
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+
+@mixin threerooms{
+    #th{
+        width: 100%;
+        height: 500px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        padding-inline: 100px;
+
+        @include sm{
+            width: 100%;
+            height: 700px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-row-gap: 1rem;
+            padding-inline: 1rem;
+            margin-block: 5rem
+        }
+
+        @include md{
+            width: 100%;
+            height: 1200px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-row-gap: 5rem;
+            padding-inline: 5rem;
+            margin-block: 8rem
+        }
+
+        @include xl{
+            width: 100%;
+            height: 500px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1rem;
+            padding-inline: 100px; 
+        }
+
+        .thst{
+            width: 425px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+
+            @include sm{
+                width: 100%;
+                height: 200px;
+            }
+
+            @include md{
+                width: 100%;
+                height: 250px;
+            }
+
+            @include xl{
+                width: 425px;
+                height: 500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1rem;  
+            }
+
+            div:first-child{
+                width: 425px;
+                height: 350px;
+
+                @include sm{
+                    width: 100%;
+                    height: 120px;
+                }
+
+                @include md{
+                    width: 100%;
+                    height: 300px;
+                }
+
+
+                @include xl{
+                    width: 425px;
+                    height: 350px;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            div:last-child{
+                @include sm{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+
+                }
+
+                @include md{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+
+                }
+
+                @include xl{
+                    text-align: start;
+                }
+
+            }
+
+        
+        }
+
+        .thnd{
+            width: 425px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+
+            @include sm{
+                width: 100%;
+                height: 200px;
+            }
+
+            @include md{
+                width: 100%;
+                height: 250px;
+            }
+
+            @include xl{
+                width: 425px;
+                height: 500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+
+            div:first-child{
+                width: 425px;
+                height: 350px;
+
+                @include sm{
+                    width: 100%;
+                    height: 130px;
+                }
+
+                @include md{
+                    width: 100%;
+                    height: 300px;
+                }
+
+                @include xl{
+                    width: 425px;
+                    height: 350px;
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            div:last-child{
+                @include sm{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+
+                }
+
+                @include md{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+            }
+
+            @include xl{
+                text-align: start;
+            }
+        
+        }
+
+
+        }
+
+        .thrd{
+            width: 425px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+
+            @include sm{
+                width: 100%;
+                height: 200px;
+            }
+
+            @include md{
+                width: 100%;
+                height: 250px;
+            }
+
+            @include xl{
+                width: 425px;
+                height: 500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1rem;  
+            }
+
+            div:first-child{
+                width: 425px;
+                height: 350px;
+
+                @include sm{
+                    width: 100%;
+                    height: 120px;
+                }
+
+                @include md{
+                    width: 100%;
+                    height: 300px;
+                }
+
+
+                @include xl{
+                    width: 425px;
+                    height: 350px;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            div:last-child{
+                @include sm{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+
+                }
+
+                @include md{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+
+                }
+
+                @include xl{
+                    text-align: start;
+                }
+
+            }
+
+            
+        
+        }
+
+}
+}
+
+
+@mixin bgimg{
+    #fth{
+        width: 100%;
+        height: 400px;
+        background-color: #3f9cc1;
+        background-image: url("/ProjectImages/People-Say-.jpg");
+        background-size: cover;
+        margin-block: 100px;
+        position: relative;
+
+        @include sm{
+            height: 200px;
+            margin-block: 2rem;
+        }
+
+        @include md{
+            margin-block: 3rem;
+        }
+
+        @include xl{
+            width: 100%;
+            height: 400px;
+            background-color: #3f9cc1;
+            background-image: url("/ProjectImages/People-Say-.jpg");
+            background-size: cover;
+            margin-block: 100px;
+            position: relative;
+        }
+
+
+
+
+        .fthblue{
+            width: 45%;
+            height: 500px;
+            background-color: #3f9cc1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 2rem;
+            position: absolute;
+            top: -50px;
+            left:100px;
+            color: $generalbgcolor;
+            padding-inline: 4rem;
+
+            @include sm{
+                width: 53%;
+                height: 250px;
+                justify-content: start;
+                align-items: start;
+                gap: 0.5rem;
+                padding: .5rem;
+                top: -25px;
+                left: 10px;
+                font-size: .8rem;
+
+            }
+
+            @include md{
+                width: 53%;
+                height: 450px;
+                justify-content: center;
+                align-items: start;
+                gap: 1rem;
+                padding-inline: .9rem;
+                top: -25px;
+                left: 20px;
+                font-size: 1.5rem;
+            }
+
+            @include xl{
+                width: 45%;
+                height: 500px;
+                background-color: #3f9cc1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 2rem;
+                position: absolute;
+                top: -50px;
+                left:100px;
+                color: $generalbgcolor;
+                padding-inline: 4rem;
+            }
+
+            .bluedown{
+                width: 100%;
+                height: 200px;
+                padding-left: 12rem;
+
+                @include sm{
+                    height: 100px;
+                    padding-left: 1rem;
+                    color: $generalbgcolor;
+                }
+
+                @include md{
+                    height: 90px;
+                    padding-left: 5rem;
+                    color: $generalbgcolor;
+                }
+
+                @include xl{
+                    width: 100%;
+                    height: 200px;
+                    padding-left: 12rem;
+                }
+
+                div{
+                    width: 100px;
+                    height: 100px;
+
+                    @include sm{
+                        width: 35px;
+                        height: 35px;
+                    }
+
+                    @include md{
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    @include xl{
+                        width: 100px;
+                        height: 100px;
+                    }
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+
+                div::after{
+                    content: "Zubby Lanky";
+                    font-size: .9rem;
+                    float: right;
+                }
+            }
+        
+            
+        }
+    }
+}
+
+
+@mixin resturant{
+    #sth {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8rem;
+        margin-block: 10rem;
+
+        @include sm{
+            height: 600px;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5rem;
+            margin-block: 7rem; 
+        }
+
+        @include md{
+            height: 900px;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5rem;
+            margin-block: 9rem; 
+        }
+
+        @include xl{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 8rem;
+            margin-block: 10rem;
+        }
+
+        div:first-child{
+            width: 600px;
+            height: 500px;
+
+            @include sm{
+                width: 100%;
+                height: 250px;
+            }
+
+            @include md{
+                width: 100%;
+                height: 400px;
+            }
+
+            @include xl{
+                width: 600px;
+                height: 500px;
+            }
+
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        div:last-child{
+            width: 600px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            justify-items: start;
+            gap: 1.4rem;
+
+            @include sm{
+                width: 100%;
+                height: 350px;
+                justify-content: center;
+                padding-inline: 1rem;
+                font-size: $smallfont;
+            }
+
+            @include md{
+                width: 100%;
+                height: 450px;
+                justify-content: center;
+                padding-inline: 3rem;
+                font-size: $generalfont;  
+            }
+
+            @include xl{
+                width: 600px;
+                height: 500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                justify-items: start;
+                gap: 1.4rem;
+            }
+
+            .top{
+                width: 100%;
+                height: 130px;
+
+                @include sm{
+                    height: 120px;
+                }
+
+                @include md{
+                    height: 150px;
+                }
+
+                @include xl{
+                    width: 100%;
+                    height: 130px;
+                }
+
+                div{
+                    width: 100%;
+                    height: 30px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    color: #c1b086;
+                
+                }
+            }
+
+            .mid{
+                width: 100%;
+                height: 100px;
+                background-color: #ffffff;
+
+                @include sm{
+                    height: 80px;
+                }
+
+                @include md{
+                    height: 80px;
+                }
+
+                @include xl{
+                    width: 100%;
+                    height: 100px;
+                    background-color: #ffffff;
+                }
+
+            }
+
+            .end{
+                width: 100%;
+                height: 100px;
+                display: flex;
+                flex-direction: column;
+
+                @include sm{
+                    gap: .5rem;
+                }
+
+                @include md{
+                    height: 150px;
+                    align-items: space-between;
+                }
+
+                @include xl{
+                    width: 100%;
+                    height: 100px;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                div:first-child{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    color: #c1b086;
+                }
+
+                div:nth-child(2){
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    color: #c1b086;
+                
+                }
+
+                div:last-child{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    color: #c1b086;
+                
+
+                    @include md{
+                        gap: 20rem;
+                    }
+
+                    @include xl{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        color: #c1b086;
+                    }
+
+                    
+                }
+
+            }
+            
+
+        }
+
+    //    .david{
+    //         width: 600px;
+    //         font-size: $smallfont;
+    //         .accordion{
+    //             width: 600px;
+    //         }
+            
+    //     }
+       }
+
+    }
+
+
+@mixin fourrooms{
+    #seventh{
+        width: 100%;
+        height: 400px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 3rem;
+        padding-inline: 100px;
+
+        @include sm{
+            height: 850px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-row-gap: 2rem;
+            padding-inline: 1rem;
+            margin-top: 9rem;
+            margin-bottom: 4rem;
+        }
+
+        @include md{
+            height: 600px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+            padding-inline: 3rem;
+        }
+
+        @include xl{
+            width: 100%;
+            height: 400px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 3rem;
+            padding-inline: 100px;
+        }
+
+        div{
+            width: 300px;
+            height: 350px;
+
+            @include sm{
+                width: 100%;
+                height: 200px;
+            }
+
+            @include md{
+                width: 100%;
+                height: 250px;
+            }
+
+            @include xl{
+                width: 300px;
+                height: 350px;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@mixin map{
+    iframe{
+        width: 100%;
+        height: 400px;
+        filter: invert(100%);
+        margin-block: 2rem;
+        position: relative;
+
+        @include sm{
+            height: 150px;
+        }
+
+        @include md{
+            height: 300px;
+        }
+
+        @include xl{
+            width: 100%;
+            height: 400px;
+            filter: invert(100%);
+            margin-block: 2rem;
+            position: relative;
+        }
+    }
+}
+
+
+@mixin fot{
+        #fottop{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: start;
+            gap: 13rem;
+            margin-block: 3rem;
+
+            @include sm{
+                height: 800px;
+                font-size: $smallestfont;
+                flex-direction: column;
+                gap: 3rem;
+                padding-inline: 2rem;
+            }
+
+            @include md{
+                height: 500px;
+                font-size: $smallestfont;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-row-gap: 1.5rem;
+                justify-items: center;
+                padding-inline: 2rem;
+            }
+
+            @include xl{
+                width: 100%;
+                height: 300px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: start;
+                gap: 13rem;
+                margin-block: 3rem; 
+            }
+           
+
+            div:first-child{
+                width: 300px;
+                height: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                gap: 1.7rem;
+
+                @include sm{
+                    width: 100%;
+                    height: 200px;
+
+                }
+
+                @include md{
+                    width: 100%;
+                    height: 120px;
+
+                }
+
+                @include xl{
+                    width: 300px;
+                    height: 300px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    gap: 1.7rem;
+                }
+
+
+                .logo{
+                    width: 200px;
+                    height: 200px;
+
+                    @include sm{
+                        width: 40%;
+                        height: 40%;
+                    }
+
+                    @include md{
+                        width: 50%;
+                        height: 50%;
+                    }
+
+                    @include xl{
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+
+            }
+
+            div:nth-child(3){
+                line-height: 2.5rem;
+            }
+        
+        }
+     
+
+        .fotbut{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline: 60px;
+
+            @include sm{
+                height: 30px;
+                padding-inline: 1rem;
+                font-size: .8rem;
+            }
+
+           @include md{
+            height: 35px;
+            padding-inline: 3rem;
+            font-size: $smallestfont;
+           }
+
+           @include xl{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline: 60px;
+           }
+
+            div:last-child a{
+                color: #c1b086;
+            }
+        }
+
+
+}
+
+
+
+
+
+//ROOM CLASSIC VIEW
+
+@mixin roomclassicviewhead{
+    #headtop{
+        width: 100%;
+        height: 120px;
+        text-align: center;
+        padding-block: 100px;
+
+        h2{
+            font-size: $bigfont;
+        }
+
+        p{
+            font-size: $smallfont;
+        }
+       
+    }
+}
+
+
+@mixin standardsingleroom{
+    #phot{
+        width: 100%;
+        height: 600px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+        gap: 4rem;
+        padding-inline: $generalpaddingleftright;
+        margin-block: 5rem;
+
+        div:first-child{
+            width: 600px;
+            height: 600px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        div:last-child{
+            width:  600px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: 1rem;
+            font-size: $smallfont;
+
+            
+            .nd{
+                i{
+                    color: $goldencolor;
+                }
+            }
+
+            .fth{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                gap: 3rem;
+            }
+        }
+    }
+}
+
+
+
+
+//ROOM GRID VIEW 
+
+@mixin gridd{
+    #grids{
+    width: 100%;
+    height: 2000px;
+    margin-block: 5rem;
+    padding-inline: $generalpaddingleftright;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: $smallfont;
+
+
+    div:first-child{
+        width: 650px;
+        height: 500px;
+        
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    #amara{
+        width: 600px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-block: 20rem;
+        padding-inline: 5rem;
+        gap: 1rem;
+
+        .nd{
+            i{
+                color: $goldencolor;
+
+            }
+        }
+
+        .fth{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+        }
+
+    }
+
+
+        div:nth-child(4){
+        width: 650px;
+        height: 500px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    div:nth-child(5){
+        width: 650px;
+        height: 500px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+
+    div:last-child{
+        width: 650px;
+        height: 500px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    
+
+    }
+
+}
+
+
+//SINGLE ROOM
+@mixin singleroom{
+        #singlerompic{
+            width: 100%;
+            height: 700px;
+            padding-inline: $generalpaddingleftright;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+}
+
+@mixin singleroommd{
+    #singlerommid{
+        width: 100%;
+        height: 2000px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10rem;
+        padding-inline: $generalpaddingleftright;
+        margin-block: $generalmargintopbut;
+
+        #left{
+            width: 60%;
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            #sst{
+                width: 100%;
+                height: 220px;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+            }
+            
+            #nnd{
+                width: 100%;
+                height: 1900px;
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-auto-rows: minmax(250px, auto);
+              // grid-template-rows: repeat(4, minmax(250px, auto));
+
+                grid-gap: 2rem;
+
+                div:first-child{
+                    height: 250px;
+                    grid-column: 1/6;
+                    background-color: $bgbulecolor;
+                    
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                
+                }
+
+                div:nth-child(2){
+                        height: 250px;
+                        grid-column: 6/13;
+                        background-color: $bgbulecolor;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                }
+
+                div:nth-child(3){
+                        height: 250px;
+                        grid-column: 1/8;
+                        grid-row: 2\3;
+                        background-color: $bgbulecolor;
+
+                    
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    
+                }
+
+                div:nth-child(4){
+                        height: 250px;
+                        grid-column: 8/13;
+                        grid-row: 2/3;
+                        background-color: $bgbulecolor;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    
+                }
+
+                div:nth-child(5){
+                        height: 250px;
+                        grid-column: 1/6;
+                        grid-row: 3/4;
+                        background-color: $bgbulecolor;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    
+                }
+
+
+                div:nth-child(6){
+                    height: 250px;
+                    grid-column: 6/13;
+                    grid-row: 3/4;
+                    background-color: $bgbulecolor;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                }
+                
+            }
+
+
+                div:last-child{
+                        height: 250px;
+                        grid-column: 1/8;
+                        background-color: $bgbulecolor;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                }
+
+            
+            }
+
+            #tth{
+                width: 100%;
+                height: 300px;
+                background-color: $bgbulecolor;
+
+            }
+
+            #ffth{
+                width: 100%;
+                height: 200px;
+                background-color: aqua;
+
+
+            }
+            
+
+        }
+        #right{
+            width: 30%;
+            height: 400px;
+            background-color: $whitecolor;
+            padding: 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            position: sticky;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+
+@mixin jude{
+    #room{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-block: 1px solid #ccc;
+
+        div:first-child{
+            height: 100px;
+            padding-inline: 6rem;
+        }
+
+        div:last-child{
+            height: 100px;
+            padding-inline: 6rem;
+            border-left: 1px solid #ccc;
+        }
+    }
+}
+
+@mixin faces{
+    #face{
+        width: 100%;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        //gap: 5rem;
+        
+       li{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+
+        div:first-child{
+            width: 70px;
+            height: 70px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+        div:last-child{
+            width: 600px;
+            height: 100px;
+            font-size: $smallfont;
+        }
+       }
+                      
+    }
+}
+
+
+
+//BOOKINGS
+@mixin book{
+    #books{
+        background-color: $bgbulecolor;
+        color: $goldencolor;
+        position: absolute;
+        top: 290px;
+        left: 100px;
+    
+        h1{
+            font-size: $biggestfont;
+        }
+    }
+}
+
+
+
+
+//CONTACT US PAGE
+
+@mixin address{
+    #addre{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+        gap: 12rem;
+        margin-top: 5rem;
+        font-size: $smallfont;
+
+        #adde{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            div{
+                line-height: 1rem;
+
+                i{
+                    color: $goldencolor
+                }
+
+            }
+            
+        }
+    
+    }
+        
+    }
+
+   @mixin sendmessage{
+    #message{
+        width: 35%;
+        height: 600px;
+        background-color: $whitecolor;
+        padding: 7rem;
+        position: absolute;
+        top: 480px;
+        right: 100px;
+        font-size: $smallfont;
+    }
+   }
+   
